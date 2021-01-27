@@ -1,17 +1,17 @@
 import pygame
 pygame.init()
 window = pygame.display.set_mode((1200, 400))
-track = pygame.image.load('track6.png')
+track = pygame.image.load('track6.png')   #here use any image from track1 to track 6 ...for fun ....(ō｡ŏ)
 car = pygame.image.load('tesla.png')
 car = pygame.transform.scale(car,(30,60))
 car_x =150  #inittalising the initaial co-ordinates of car
 car_y =300   #inittalising the initaial co-ordinates of car
 drive =True
 direction ='Up'
-focal_distance = 25   #adding camera for tracking
+focal_distance = 25   #adding camera for tracking  (This will act as a camera for the car to detect the road)
 cam_x_offset = 0
 cam_y_offset = 0
-clock = pygame.time.Clock()
+clock = pygame.time.Clock()  
 while drive:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
